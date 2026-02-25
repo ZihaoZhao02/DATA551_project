@@ -1,6 +1,6 @@
 # Mercedes-Benz Sales Insights Dashboard (2020-2025)
 
-Deployed app link: **to be updated after render deployment**
+Deployed app link: **https://data551-project.onrender.com/**
 
 This project is an interactive dashboard for Mercedes-Benz sales data from 2020 to 2025.
 
