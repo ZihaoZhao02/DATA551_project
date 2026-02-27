@@ -1,14 +1,13 @@
 # Mercedes-Benz Sales Insights Dashboard (2020-2025)
 
 ## 1. Motivation and Purpose
-Our role is a student data consulting team for car retail planning.  
-Our target audience is regional dealership managers.  
-These managers need to decide what models and configurations to stock each quarter.  
-They also need to track how fast hybrid and electric demand is changing.
+Our role: A student data consulting team working for a Mercedes-Benz retail analytics unit (or a dealer group’s planning team).
 
-We build this dashboard to support these decisions with clear visual evidence.  
-Users can compare trends by year, model, fuel type, color, and performance features.  
-The goal is to reduce guesswork in inventory planning and product positioning.
+Target audience: Regional dealership managers who make quarterly inventory and showroom display decisions.
+
+Dealership managers must decide which models and configurations to stock (fuel type, turbo, horsepower bands, and color mix) under a limited budget and floor space. At the same time, they need to monitor whether hybrid/electric demand is accelerating and which segments are shifting.
+
+We built this dashboard to provide evidence-based support for these decisions by enabling fast comparison of sales patterns across years, models, fuel types, prices, and performance features. The goal is to reduce guesswork in inventory planning and improve product positioning using interactive visual exploration.
 
 ## 2. Description of the Data
 We use a Mercedes-Benz sales dataset from Kaggle for years 2020 to 2025.  
@@ -53,23 +52,31 @@ We will compare top colors by year and by model group.
 ## 4. Usage Scenarios
 ### Persona
 Liam is a regional dealership manager. He prepares quarterly inventory plans.  
-He needs simple evidence before he sends order recommendations to headquarters.
+He requires simple evidence before sending order recommendations to headquarters.
 
 ### Scenario A: Quarterly inventory planning
-Liam opens the dashboard and first selects the last two years.  
-He checks the fuel-type trend chart to see if hybrid and electric are growing.  
-Next, he clicks one fuel type to filter all other charts.  
-He then checks model ranking and price-horsepower distribution for that segment.  
-Finally, he exports a short note: increase orders for top models in the selected segment.
+Liam opens the dashboard before submitting next-quarter order recommendations.  
+1) He sets the Year range filter to the most recent 8 quarters (e.g., 2023–2025) to focus on current demand.  
+2) In the Fuel Type trend chart, he compares the sales share trajectories of Petrol vs Hybrid vs Electric.  
+3) He clicks “Electric” in the legend (or bar/line) to cross-filter the entire dashboard to only electric records.  
+4) The Top Models panel updates; Liam identifies the top 5 electric-selling models and checks whether their trend is stable or growing.  
+5) He uses the Price and Horsepower sliders to narrow to the dealership’s budget-friendly range, then checks whether demand concentrates in specific horsepower bands.  
+Decision: He increases orders for the best-performing electric models in the selected price band and reduces low-selling trims.
+
 
 ### Scenario B: Marketing and display planning
-Liam selects one model family and one price range.  
-He checks the color chart to find the top colors for that segment.  
-Then he switches between years to see if color preferences changed.  
-He uses this result to suggest showroom color mix and ad focus for next month.
+Liam needs to decide what colors/configurations to feature in next month’s showroom and marketing materials.  
+1) He selects a target model family (e.g., GLC) and a mid-to-high price range using filters.  
+2) In the Color Preference chart, he ranks colors by sales count and notes the top 3 colors for the chosen segment.  
+3) He toggles between years (2024 vs 2025) to check if preferences are shifting (e.g., White decreasing, Grey increasing).  
+4) He optionally filters Turbo = Yes to see whether performance-oriented buyers prefer different colors.  
+Decision: He recommends a showroom color mix. 
 
 ### Scenario C: Performance package decision
-Liam filters by model and compares turbo vs non-turbo sales distribution.  
-He looks at horsepower bands and their sales concentration.  
-If high-horsepower turbo trims have stable demand, he keeps those trims in stock.  
-If not, he reduces low-demand trims and shifts budget to higher-demand configurations.
+Liam wants to know whether performance-oriented configurations are worth stocking.  
+1) He filters to one model (or a small set of comparable models).  
+2) He compares Turbo = Yes vs No, checking the relative sales volume and how it changes over time.  
+3) In the Price vs Horsepower view, he looks for clusters where sales concentrate (e.g., 250–350 hp turbo trims).  
+4) He checks whether higher-horsepower trims sell consistently or only in specific years.  
+Decision: If turbo high-hp trims exhibit stable demand, he keeps them in the inventory mix; otherwise, he shifts budget toward configurations with stronger, more consistent sales.
+
